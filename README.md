@@ -7,8 +7,11 @@
 
 <h3>You can access the website using the following Link:</h3>
 https://salty-forest-44027.herokuapp.com
-</br></br></br>
+</br></br></br></br></br></br>
 
 
 ![Screenshot 2022-05-29 000951](https://user-images.githubusercontent.com/66233331/170838750-f2ee1fe0-c68a-4731-98cd-bc363ddadaae.png)
+</br>
+</br></br></br></br></br></br>
 
+![Screenshot 2022-05-29 003819](https://user-images.githubusercontent.com/66233331/170839628-099ab9b2-0696-4f81-a450-253dd57cc149.png)
