@@ -5,7 +5,7 @@
 <p> The website is being hosted using <strong>Heroku</strong></p>
 
 
-<h3>You can access the website using the follwing Link:</h3>
+<h3>You can access the website using the following Link:</h3>
 https://salty-forest-44027.herokuapp.com
 </br></br></br>
 
