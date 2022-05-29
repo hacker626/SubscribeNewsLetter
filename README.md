@@ -7,6 +7,7 @@
 
 <h3>You can access the website using the following Link:</h3>
 https://salty-forest-44027.herokuapp.com
+<p>Extra: Please use your own API key generated from mailchimp(it is just default copy).</p>
 </br></br></br></br></br></br>
 
 
