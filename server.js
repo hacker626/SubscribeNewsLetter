@@ -1,9 +1,10 @@
 const express = require('express');
 app = express();
+const ejs = require("ejs");
 const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
-
+app.set("view engine","ejs");
 app.use(express.static(__dirname+"/public"));
 app.use(bodyParser.urlencoded({extended:false}));
 
@@ -34,7 +35,7 @@ app.post("/submit",function(req,res){
   const url = "https://us18.api.mailchimp.com/3.0/lists/933e89be03"
   const options  = {
     method:"POST",
-    auth: "Bhaskar:b2cee130437705e2610ae81b6f25fb84-us18"
+    auth: "Bhaskar:c59bd0cdd663e1e809a7ef52b2b69614-us18"
   }
   const request = https.request(url,options,function(response){
     response.on("data",function(data){
@@ -43,7 +44,7 @@ app.post("/submit",function(req,res){
       errorCount = JSON.parse(data).error_count
       console.log(JSON.parse(data).error_count);
       if(errorCount == 0 && response.statusCode == 200){
-          res.sendFile(__dirname+"/success.html");
+          res.render("success",{"firstName":firstName,"lastName":lastName,"emailId":emailId});
       }
       else{
         res.sendFile(__dirname+"/failure.html");
