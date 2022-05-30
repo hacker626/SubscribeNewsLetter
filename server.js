@@ -1,9 +1,10 @@
 const express = require('express');
 app = express();
+const ejs = require("ejs");
 const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
-
+app.set("view engine","ejs");
 app.use(express.static(__dirname+"/public"));
 app.use(bodyParser.urlencoded({extended:false}));
 
@@ -43,7 +44,7 @@ app.post("/submit",function(req,res){
       errorCount = JSON.parse(data).error_count
       console.log(JSON.parse(data).error_count);
       if(errorCount == 0 && response.statusCode == 200){
-          res.sendFile(__dirname+"/success.html");
+          res.render("success",{"firstName":firstName,"lastName":lastName,"emailId":emailId});
       }
       else{
         res.sendFile(__dirname+"/failure.html");
